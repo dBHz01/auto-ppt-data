@@ -1,7 +1,7 @@
 import numpy as np
 
 OFFICE_FILENAME = "office-time.txt"
-PEOPLE = "jjx lbc lgz xtx ywt zhp zxy zyw"
+PEOPLE = "jjx lbc lgz xtx ywt zhp zxy zyw lyf dyc wzz hmf"
 
 def time2second(t: str):
     '''

@@ -4,8 +4,10 @@ import pandas as pd
 from simplelog import cal_naive_time_separately_single, cal_naive_whole_time, cal_time_separately, cal_time_separately_single 
 from dp_office import cal_all_time, cal_ave_time
 import seaborn as sns
+import scipy.stats
 
 def plot_with_matplotlib():
+    # 错误的，不要跑
     our_time = cal_time_separately()
     office_time = cal_ave_time()
     print("total: ", (np.sum(office_time) - np.sum(our_time)) / np.sum(office_time))
@@ -30,23 +32,26 @@ def plot_with_matplotlib():
     plt.show()
 
 def plot_with_sns():
-    people_num = 8
-    new_people_num = 12
-    our_time = cal_time_separately_single().flatten()
-    naive_time = cal_naive_whole_time().flatten()
-    office_time = np.array(cal_all_time().flatten(), dtype=np.float64)
-    all_time = np.concatenate((our_time, office_time))
-    all_time = np.concatenate((all_time, naive_time))
+    people_num = 12
+    our_time = cal_time_separately_single()
+    our_time_flattern = cal_time_separately_single().flatten()
+    # naive_time = cal_naive_whole_time().flatten()
+    office_time = np.array(cal_all_time(), dtype=np.float64)
+    office_time_flattern = np.array(cal_all_time(), dtype=np.float64).flatten()
+    all_time = np.concatenate((our_time_flattern, office_time_flattern))
+    # all_time = np.concatenate((all_time, naive_time))
     df = pd.DataFrame({
         'time': all_time,
-        'task': [1] * new_people_num + [2] * new_people_num + [3] * new_people_num + [4] * new_people_num + 
-             [1] * people_num + [2] * people_num + [3] * people_num + [4] * people_num +
+        'task': [1] * people_num + [2] * people_num + [3] * people_num + [4] * people_num + 
              [1] * people_num + [2] * people_num + [3] * people_num + [4] * people_num,
-        'label': ["CNET"] * new_people_num * 4 + ["office"] * people_num * 4 + ["naive"] * people_num * 4
+        'label': ["CNET"] * people_num * 4 + ["office"] * people_num * 4
     })
+    print("total: {}".format((np.mean(office_time_flattern) - np.mean(our_time_flattern)) / np.mean(office_time_flattern)))
+    print("separate: {}".format([(np.mean(office_time[i]) - np.mean(our_time[i])) / np.mean(office_time[i]) for i in range(4)]))
+    for i in range(4):
+        print("anova: task_{} {}".format(i + 1, scipy.stats.f_oneway(our_time[i], office_time[i])))
     sns.barplot(x="task", y="time", hue="label", data=df)
     plt.show()
-
 
 if __name__ == "__main__":
     plot_with_sns()

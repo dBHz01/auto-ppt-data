@@ -580,7 +580,7 @@ def cal_time_separately_single():
     '''
     all_time_0 = []
     for i in range(4):
-        all_time_0.append([]) # last is gap time
+        all_time_0.append([])
     round_type_num = [0, 0, 0]
     round_num = 0
     total_time = 0
@@ -1107,7 +1107,7 @@ def cal_think_time():
     #     for j in range(4):
     #         # i[j] = [np.mean(i[j]), len(i[j])]
     #         i[j] = [np.mean(i[j])]
-    print(all_think_time)
+    # print(all_think_time)
     return all_think_time
     # return np.array(all_think_time) / 1000
     # return think_time_with_people

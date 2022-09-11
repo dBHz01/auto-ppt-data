@@ -61,9 +61,10 @@ if __name__ == "__main__":
         # print(np.mean(np.array(cnet_seq)))
         # print(np.mean(np.array(office_seq)))
         for i in range(4):
-            print("task {} cnet average score: {} ppt average score {}".format(i + 1, np.mean(cnet_score[i]), np.mean(office_score[i])))
-            print("wilcoxon: {}".format(scipy.stats.wilcoxon(cnet_score[i], office_score[i])))
-            print("task {} cnet average seq: {} ppt average seq {}".format(i + 1, np.mean(cnet_seq[i]), np.mean(office_seq[i])))
-            print("wilcoxon: {}".format(scipy.stats.wilcoxon(cnet_seq[i], office_seq[i])))
+            print("task {} cnet average score: {} ppt average score: {}".format(i + 1, np.mean(cnet_score[i]), np.mean(office_score[i])))
+            # print("wilcoxon: {}".format(scipy.stats.wilcoxon(cnet_score[i], office_score[i])))
+            print("task {} cnet average rank: {} ppt average rank: {}".format(i + 1, np.mean(cnet_seq[i]), np.mean(office_seq[i])))
+            # print("wilcoxon: {}".format(scipy.stats.wilcoxon(cnet_seq[i], office_seq[i])))
             print("anova: {}".format(scipy.stats.f_oneway(cnet_score[i], office_score[i])))
+            print()
 

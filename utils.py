@@ -9,3 +9,13 @@ def remove_all(array, a):
     while a in array:
         array.remove(a)
     return array
+
+def down(lst):
+    out = []
+    for obj in lst:
+        if isinstance(obj, list):
+            out += obj
+    if len(out) == 0:
+        return lst
+    else:
+        return out

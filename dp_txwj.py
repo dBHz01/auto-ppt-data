@@ -28,6 +28,35 @@ office_seq = []
 for i in range(4):
     office_seq.append([])
 
+def getScore():
+    with open(TXWJ_FILENAME, "r") as f:
+        data = f.read().split("\n")
+        for line in data:
+            line = line.split("\t")
+            seq = [0] * 24 # 第 i 位表示第 i 张图的名次
+            for task_id in range(4):
+                for i in range(24):
+                    id = 48 * task_id + i
+                    seq[i] = int(line[id])
+                    if (raw_id(i + 1, task_id) <= 12):
+                        cnet_seq[task_id].append(int(line[id]))
+                    else:
+                        office_seq[task_id].append(int(line[id]))
+                # for i in range(24):
+                #     id = 48 * task_id + i
+                #     seq.append(raw_id(int(line[id]), task_id))
+                #     if (raw_id(int(line[id]), task_id) <= 12):
+                #         cnet_seq[task_id].append(i)
+                #     else:
+                #         office_seq[task_id].append(i)
+                for i in range(24):
+                    id = 48 * task_id + 24 + i
+                    if (raw_id(seq.index(i + 1) + 1, task_id) <= 12):
+                        cnet_score[task_id].append(int(line[id]))
+                    else:
+                        office_score[task_id].append(int(line[id]))
+    return cnet_score, office_score
+
 if __name__ == "__main__":
     with open(TXWJ_FILENAME, "r") as f:
         data = f.read().split("\n")

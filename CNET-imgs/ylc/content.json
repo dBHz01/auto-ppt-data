@@ -1,0 +1,392 @@
+[
+    {
+        "type": "element",
+        "name": "1",
+        "elementType": "CIRCLE",
+        "id": 1,
+        "x": 117.15541935146473,
+        "y": 114.00004808076532,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 200,
+        "text": "明暗"
+    },
+    {
+        "type": "element",
+        "name": "2",
+        "elementType": "CIRCLE",
+        "id": 2,
+        "x": 315.52683662059155,
+        "y": 111.71433321195018,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 200,
+        "text": "明暗"
+    },
+    {
+        "type": "element",
+        "name": "3",
+        "elementType": "CIRCLE",
+        "id": 3,
+        "x": 384.82523915243587,
+        "y": 196.2223384021231,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 400,
+        "text": "暗"
+    },
+    {
+        "type": "element",
+        "name": "4",
+        "elementType": "CIRCLE",
+        "id": 4,
+        "x": 246.22843409313163,
+        "y": 196.22233839778852,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 100,
+        "text": "明"
+    },
+    {
+        "type": "element",
+        "name": "5",
+        "elementType": "CIRCLE",
+        "id": 5,
+        "x": 176.93003156429742,
+        "y": 196.22233840023873,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 400,
+        "text": "暗"
+    },
+    {
+        "type": "element",
+        "name": "6",
+        "elementType": "CIRCLE",
+        "id": 6,
+        "x": 38.3332265123055,
+        "y": 196.22233839682596,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 100,
+        "text": "明"
+    },
+    {
+        "type": "element",
+        "name": "7",
+        "elementType": "CIRCLE",
+        "id": 7,
+        "x": 38.333226517509345,
+        "y": 334.81914344753744,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 100,
+        "text": "明明"
+    },
+    {
+        "type": "element",
+        "name": "8",
+        "elementType": "CIRCLE",
+        "id": 8,
+        "x": 176.93009509432318,
+        "y": 334.81914345208946,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 200,
+        "text": "明暗"
+    },
+    {
+        "type": "element",
+        "name": "9",
+        "elementType": "CIRCLE",
+        "id": 9,
+        "x": 249.56182686739461,
+        "y": 334.819143451438,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 200,
+        "text": "明暗"
+    },
+    {
+        "type": "element",
+        "name": "10",
+        "elementType": "CIRCLE",
+        "id": 10,
+        "x": 381.96823438713596,
+        "y": 334.8191434509152,
+        "shape": "",
+        "w": 60,
+        "h": 60,
+        "color": "green",
+        "lightness": 400,
+        "text": "暗暗"
+    },
+    {
+        "type": "element",
+        "name": "arrow-1-6",
+        "elementType": "ARROW",
+        "id": 11,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 1,
+        "endElement": 6,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-1-5",
+        "elementType": "ARROW",
+        "id": 12,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 1,
+        "endElement": 5,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-2-4",
+        "elementType": "ARROW",
+        "id": 13,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 2,
+        "endElement": 4,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-2-3",
+        "elementType": "ARROW",
+        "id": 14,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 2,
+        "endElement": 3,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-6-7",
+        "elementType": "ARROW",
+        "id": 15,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 6,
+        "endElement": 7,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-5-9",
+        "elementType": "ARROW",
+        "id": 16,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 5,
+        "endElement": 9,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-6-8",
+        "elementType": "ARROW",
+        "id": 17,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 6,
+        "endElement": 8,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-5-10",
+        "elementType": "ARROW",
+        "id": 18,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 5,
+        "endElement": 10,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-4-7",
+        "elementType": "ARROW",
+        "id": 19,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 4,
+        "endElement": 7,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "element",
+        "name": "arrow-4-9",
+        "elementType": "ARROW",
+        "id": 20,
+        "pointerAtBeginning": false,
+        "dashEnabled": false,
+        "startElement": 4,
+        "endElement": 9,
+        "pointerAtEnding": true
+    },
+    {
+        "type": "attribute",
+        "name": "const_dis",
+        "element": 0,
+        "val": 198.3714172703425
+    },
+    {
+        "type": "attribute",
+        "name": "randwcbeipeovsb",
+        "element": 0,
+        "val": 114.00004807990432
+    },
+    {
+        "type": "attribute",
+        "name": "rand2x9fcpi7qpf",
+        "element": 0,
+        "val": 111.71433320858107
+    },
+    {
+        "type": "attribute",
+        "name": "randpxsf6ocnzk8",
+        "element": 0,
+        "val": 384.82523914542827
+    },
+    {
+        "type": "attribute",
+        "name": "randwj2mdg2f54",
+        "element": 0,
+        "val": 196.22233840804324
+    },
+    {
+        "type": "attribute",
+        "name": "randfd7novhzi1",
+        "element": 0,
+        "val": 176.93009509423186
+    },
+    {
+        "type": "attribute",
+        "name": "randniza35b55k",
+        "element": 0,
+        "val": 381.9682343826913
+    },
+    {
+        "type": "attribute",
+        "name": "rand7ffe3ssmoor",
+        "element": 0,
+        "val": 334.8191434517554
+    },
+    {
+        "type": "equation",
+        "equation": "y_1  =randwcbeipeovsb_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_2  =x_1 + const_dis_0"
+    },
+    {
+        "type": "equation",
+        "equation": "y_2  =rand2x9fcpi7qpf_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_3  =randpxsf6ocnzk8_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "y_3  =randwj2mdg2f54_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "y_4  =randwj2mdg2f54_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_4 - x_2=x_2 - x_3"
+    },
+    {
+        "type": "equation",
+        "equation": "y_4  =randwj2mdg2f54_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_5 - x_4=x_4 - x_2"
+    },
+    {
+        "type": "equation",
+        "equation": "y_5  =y_4  "
+    },
+    {
+        "type": "equation",
+        "equation": "y_6  =y_5  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_2 - x_5=x_5 - x_6"
+    },
+    {
+        "type": "equation",
+        "equation": "y_5  =y_6  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_7  =x_6  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_7  =x_6  "
+    },
+    {
+        "type": "equation",
+        "equation": "y_6 - y_7=x_6 - x_5"
+    },
+    {
+        "type": "equation",
+        "equation": "y_8  =y_7  "
+    },
+    {
+        "type": "equation",
+        "equation": "y_9  =y_8  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_1 - x_9=x_9 - x_10"
+    },
+    {
+        "type": "equation",
+        "equation": "y_10  =y_9  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_8  =randfd7novhzi1_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "x_10  =randniza35b55k_0  "
+    },
+    {
+        "type": "equation",
+        "equation": "y_10  =rand7ffe3ssmoor_0  "
+    }
+]

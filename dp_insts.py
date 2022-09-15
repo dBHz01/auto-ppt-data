@@ -235,10 +235,15 @@ def candidate_ave_index():
                     print(pathname)
     print(remove_all(candidates, 0))
     candidates = np.array(candidates) + 1
+    print(len(candidates))
+    # print(list(candidates).count(2))
+    # print(list(candidates).count(3))
+    # print(list(candidates).count(4))
+    # print(list(candidates).count(5))
     print("mean: ", np.mean(remove_all(candidates, 0)))
     print("median: ",np.median(remove_all(candidates, 0)))
     print("std: ", np.std(remove_all(candidates, 0)))
-    return np.mean(remove_all(candidates, 0))
+    return np.mean(remove_all(candidates, 0)), [list(candidates).count(i) for i in range(2, 6)]
 
 if __name__ == "__main__":
     inst_num_ave()

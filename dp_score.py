@@ -4,7 +4,7 @@ import scipy.stats
 SCORE_CNET_FILENAME = "score-cnet.txt"
 SCORE_OFFICE_FILENAME = "score-office.txt"
 
-if __name__ == "__main__":
+def do_wilcoxon():
     score_cnet = []
     score_office = []
     with open(SCORE_CNET_FILENAME, "r", encoding="utf-8-sig") as f:
@@ -30,3 +30,7 @@ if __name__ == "__main__":
     print(scipy.stats.wilcoxon(score_cnet[1], score_office[1]))
     print(scipy.stats.wilcoxon(score_cnet[2], score_office[2]))
     print(scipy.stats.wilcoxon(score_cnet[3], score_office[3]))
+
+
+if __name__ == "__main__":
+    do_wilcoxon()

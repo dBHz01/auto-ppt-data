@@ -41,13 +41,15 @@ def show_single(id: int):
                 try:
                     data = json.loads(f.read())
                     for i, single_log in enumerate(data):
-                        if i + 1 < len(data):
-                            # print(single_log["msg"], data[i + 1]["ts"] - data[i]["ts"])
-                            if instructions.index(single_log["msg"]) == id:
-                                print(single_log["msg"], data[i + 1]["ts"] - data[i]["ts"], data[i+1]["msg"])
-                            all += data[i + 1]["ts"] - data[i]["ts"]
+                        # if i + 1 < len(data):
+                        #     # print(single_log["msg"], data[i + 1]["ts"] - data[i]["ts"])
+                        #     if instructions.index(single_log["msg"]) == id:
+                        #         print(single_log["msg"], data[i + 1]["ts"] - data[i]["ts"], data[i+1]["msg"])
+                        #     all += data[i + 1]["ts"] - data[i]["ts"]
+                        if instructions.index(single_log["msg"]) == id:
+                            print(single_log["msg"], i)
                 except Exception:
-                    print(pathname)
+                    print(pathname, "error")
             print(pathname, all)
             input()
 
@@ -366,7 +368,7 @@ def cal_time():
     all_time[6] += all_time_1[3]
     all_time[6] += all_time_2[3]
     # print("all time: ", all_time, np.sum(all_time))
-    # print(round_type_num)
+    print(round_type_num)
     # print(round_num)
     # print(total_time)
     time_display = all_time
@@ -1114,7 +1116,9 @@ def cal_think_time():
 
 if __name__ == "__main__":
     # show_certain_person("stp", 1)
+    show_single(instructions.index("应用推荐修改"))
     # show_simple()
     # cal_naive_whole_time()
-    t = cal_think_time()
-    print([np.mean(i) for i in np.array(t).T])
+    # cal_time()
+    # t = cal_think_time()
+    # print([np.mean(i) for i in np.array(t).T])

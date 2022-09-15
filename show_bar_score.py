@@ -34,7 +34,7 @@ def plot_with_matplotlib():
 
 def plot_with_sns():
     people_num = 20 * 12
-    cnet_score, office_score = getScore()
+    cnet_score, office_score, img_score = getScore()
     cnet_score = np.array(cnet_score)
     office_score = np.array(office_score)
     cnet_score_flattern = cnet_score.flatten()

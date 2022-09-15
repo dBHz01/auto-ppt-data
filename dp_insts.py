@@ -1,5 +1,4 @@
 from base64 import decode
-from enum import Enum
 import json
 import os
 from os import listdir
@@ -10,7 +9,7 @@ from utils import find_indices, remove_all
 plt.rcParams['font.sans-serif'] = 'simhei'
 
 # PEOPLE = "azd crj cyy djy frw lly lzj stp tty xq ylc ytj zyx".split(" ")
-PEOPLE = "crj cyy djy frw lly ytj zyx xq lzj tty azd ylc".split(" ")
+PEOPLE = "azd crj cyy djy frw lly lzj tty xq ylc ytj zyx".split(" ")
 PEOPLE_NAIVE = "cyx dhc fsy pyk sms tyq yxy znn".split(" ")
 SEQUENCE = [[3, 1, 4, 2],
             [3, 4, 2, 1],

@@ -1,7 +1,8 @@
 import numpy as np
 
 OFFICE_FILENAME = "office-time.txt"
-PEOPLE = "jjx lbc lgz xtx ywt zhp zxy zyw lyf dyc wzz hmf"
+# PEOPLE = "jjx lbc lgz xtx ywt zhp zxy zyw lyf dyc wzz hmf"
+PEOPLE = "dyc hmf jjx lbc lgz lyf wzz xtx ywt zhp zxy zyw"
 
 def time2second(t: str):
     '''
@@ -37,4 +38,5 @@ def cal_ave_time():
     return ave_time
 
 if __name__ == "__main__":
+    print(cal_all_time())
     print(cal_ave_time())

@@ -62,9 +62,9 @@ def getScore():
                     else:
                         office_score[task_id].append(int(line[id]))
                     img_score[task_id][raw_id(seq.index(i + 1) + 1, task_id) - 1].append(int(line[id]))
-    return cnet_score, office_score
+    return cnet_score, office_score, img_score
 
-def calAveScore():
+def calSortedAveScore():
     # img_score.sort(key=)
     def compFirst(a):
         return a[0]
@@ -74,6 +74,13 @@ def calAveScore():
         i.sort(key=compFirst)
     print(img_score)
 
+def getAveScore():
+    getScore()
+    for i in img_score:
+        for j in range(len(i)):
+            i[j] = (np.mean(i[j]), j + 1)
+    return img_score
+
 if __name__ == "__main__":
     getScore()
     for i in range(4):
@@ -82,5 +89,5 @@ if __name__ == "__main__":
         print("task {} cnet average rank: {} ppt average rank: {}".format(i + 1, np.mean(cnet_seq[i]), np.mean(office_seq[i])))
         # print("wilcoxon: {}".format(scipy.stats.wilcoxon(cnet_seq[i], office_seq[i])))
         print("anova: {}".format(scipy.stats.f_oneway(cnet_score[i], office_score[i])))
-    calAveScore()
+    calSortedAveScore()
 

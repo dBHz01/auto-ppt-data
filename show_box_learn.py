@@ -44,16 +44,15 @@ def plot_whole():
                 whole_time[j].append(s)
     # for j in range(4):
     #     whole_time[j] /= cnt[j]
-    print(len(whole_time[0]))
-    print(len(whole_time[1]))
-    print(len(whole_time[2]))
-    print(len(whole_time[3]))
-    print(len(down(whole_time)))
     df = pd.DataFrame({
         'time': down(whole_time),
         'label': [1] * len(whole_time[0]) + [2] * len(whole_time[1]) + [3] * len(whole_time[2]) + [4] * len(whole_time[3])
     })
     sns.lineplot(x="label", y="time", data=df, errorbar=("se", 2))
+    print(np.mean(whole_time[0]))
+    print(np.mean(whole_time[1]))
+    print(np.mean(whole_time[2]))
+    print(np.mean(whole_time[3]))
     # sns.lineplot(
     # data=df, x="label", y="time", err_style="bars", errorbar=("se", 2),
     # )

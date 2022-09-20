@@ -49,6 +49,8 @@ def plot_with_sns():
     print("total: {}".format((np.mean(office_time_flattern) - np.mean(our_time_flattern)) / np.mean(office_time_flattern)))
     print("separate: {}".format([(np.mean(office_time[i]) - np.mean(our_time[i])) / np.mean(office_time[i]) for i in range(4)]))
     for i in range(4):
+        print(np.mean(our_time[i]))
+        print(np.mean(office_time[i]))
         print("anova: task_{} {}".format(i + 1, scipy.stats.f_oneway(our_time[i], office_time[i])))
     sns.barplot(x="task", y="time", hue="label", data=df)
     plt.show()

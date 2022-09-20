@@ -50,6 +50,8 @@ def plot_with_sns():
     print("total: {}".format((np.mean(cnet_score_flattern) - np.mean(office_score_flattern)) / np.mean(office_score_flattern)))
     print("separate: {}".format([(np.mean(cnet_score[i]) - np.mean(office_score[i])) / np.mean(office_score[i]) for i in range(4)]))
     for i in range(4):
+        print(np.mean(cnet_score[i]))
+        print(np.mean(office_score[i]))
         print("anova: task_{} {}".format(i + 1, scipy.stats.f_oneway(cnet_score[i], office_score[i])))
     sns.barplot(x="task", y="score", hue="label", data=df)
     plt.show()

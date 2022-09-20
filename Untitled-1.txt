@@ -1,0 +1,63 @@
+Fig 1. This figure has two subfigures. Subfigure (a) figure has three shapes and four points. Shape 1 is a square. Shape 2 is a triangle on shape 1’s right. Shape 3 is a circle horizontally at the midpoint of Shape 1 and Shape 2 but vertically below Shape 1 and Shape 2. Point 1 is on Shape 3’s left and Point 2 is on Shape 3’s right. Point 3 is on Shape 3’s top. Point 4 is on Point 3’s right. The distance between Shape 3 and Point 1, Shape 3 and Point 2, Shape 3 and Point 3, Point 3 and Point 4 are all the same as the distance between Shape 1 and Shape 2. Subfigure (b) figure is the same as Subfigure (a) except for a hand drawn trail near Point 2. And there is an arrow pointing to it with text “Gesture”. Subfigure (c) is similar to Subfigure (a), but there is no point in it. There is a new Circle at the position of Point 2, and a line connecting Shape 3 and this circle. We call it Shape 4. Meanwhile, there is a line connecting Shape 1 and Shape 2. There is a dotted line on the upper bound of Shape 3 and Shape 4, and a dotted line on the lower bound of them too. Subfigure (d) is similar to Subfigure (c), but Shape 4 move to the position below Shape 2. There is no solid line in this figure, but there are more dotted lines. There is a dotted line on the left bound of Shape 2 and Shape 4, and a dotted line on the right bound of them too.
+
+Table 1. All cells are texts.
+
+Fig 2. There are five elements in this figure. Three of them are icons of a person. Person 1 is in the left of the figure with text “Real Assistant(Participant 2)”. Person 2 is on the right of Person 1 with text “End User(Participant 1)”. Person 3 is below Person 1 with text Observer(Experimenter). Between Person 1 and Person 2 there are two icons. The left icon is a computer with text “PPT”.  The right icon is a phone with text “Streaming Media Player Accessibility Overlay”. There are 7 arrows in this figure. Arrow 1 is from Person 1 to the computer with text “GUI Operations”. Arrow 2 is from the computer to the phone with text “RTMP Screen Live Stream”. Arrow 3 is from the phone to the computer with text “Touch Events”. Arrow 4 is from Person 2 to the phone with text “Gestures”. Arrow 5 is from Person 2 to Person 1 with text “Verbal Commands”. Arrow 6 is from Person 2 to Person 3 with text “Verbal Commands”. Arrow 7 is from Person 1 to Person 3 with text “Think Aloud”. 
+
+Table 2. All cells are texts.
+
+Fig 3. This figure is a pie chart. The parts of it are: Position with percentage 36.11% and number 221, Text with percentage 25.49% and number 156, Size with percentage 11.11% and number 68, Shape with percentage 10.29% and number 63, Endpoints (for line) with percentage 9.64% and number 59, Color with percentage 5.88% and number 36, Font style with percentage 1.47% and number 9. 
+
+Fig 4. This figure has three rows. The first row has text “User” and three dots. Upon these dots are three rectangles. The first rectangle has text “Pre-Command”. The second rectangle has text “Intra-Command”. The third rectangle has text “Post-Command”. The second row has text “CNET” and four dots. The third row has text “Content” and four dots. There are four dotted lines is this figure. All of them are from the dots in the third row to the dots in the second row with text “Content Modeling” except for the last one which has text “Execution”. There are six arrows in this figure. Arrow 1 is from row 2 dot 1 to row 1 dot 1 with text “Intention Prediction”. Arrow 2 is from row 1 dot 1 to row 2 dot 2 with text “Preliminary Result”. Arrow 3 is from row 2 dot 2 to row 1 dot 2 with text “Parsing Result”. Arrow 4 is from row 1 dot 2 to row 2 dot 3 with text “Final Command”. Arrow 5 is from row 2 dot 3 to row 1 dot 3 with text “Candidate Solutions”. Arrow 6 is from row 1 dot 3 to row 2 dot 4 with text “Selected Solution”.
+
+Fig 5. This figure has 2 subfigures. Subfigure 1 figure has four squares. Their centers forming a larger square (undrawn). There are points at the center of each pair of them. Others points are around them forming a square. Subfigure 2 figure has four rows. Each line has text and two butttons. The first button is “Preview” and the second button is “OK”. The text of the first row is “ALL SAME x: color ≤ cyan”. The text of the second row is “ALL SAME y: color ≤ cyan”. The text of the third row is “ALL SAME width: color ≤ cyan”. The text of the fourth row is “ALL SAME height: color ≤ cyan”. 
+
+Fig 6. This figure has 2 subfigures. Subfigure 1 figure has four squares the same as Fig 5 subfigure 1. Subfigure 2 figure has a line of text “Move it here”. But the text “it” is fit in a button. Below it are Four lines of text. The first line has text “text: “””. The second line has text “pos: (210, 291)”. The third line has text “h times w: (40, 40)”. The fourth line has text “color: cyan”.
+
+Fig 7. This figure has 2 subfigures. Subfigure 1 figure has four squares almost the same as Fig 5 subfigure 1. But the square at the lower right corner is moved to the center of the larger square. We call the square at the upper left corner Square 1, and the square at the upper right corner Square 2, and the square at the lower left corner Square 3, and the square at the center Square 4. There are three arrows in this figure, from Square 4 to the other three of them. Each square has a vertical dotted line in the middle. Subfigure 2 figure is four thumbnails with smaller squares in them. The first thumbnails has the same arrangement as subfigure 1. The others has different arrangement.
+
+Fig 8. This figure has 4 columns. Each of them have three rectangles. At the bottom is a large rectangle with text “Content Modeling”. The texts in the rectangles of the first column from bottom to top are “Command Parsing”, “Utterance Parsing” and “Cross-Modality Alignment”. The texts in the rectangles of the second column from bottom to top are “Solution Generation”, “Attribute Complementary” and “Conflict Resolving”. The texts in the rectangles of the third column from bottom to top are “Solution Recommendation”, “Score Calculation” and “Topology Visualization”. The texts in the rectangles of the fourth column from bottom to top are “Intention Prediction”, “Interaction-based” and “Content-based”. There are four dotted lines from the bottom rectangle to the bottom of four columns. There are three arrows from column 1 to column 2, column 2 to column 3 and column 3 to column 4 at the bottom.
+
+Table 3. All cells are texts.
+
+Fig 9. This figure has 3 subfigures. Subfigure (a) figure has three squares with text “A”, “B” and “C”. “B” is at the upper left corner. “A” is at the upper right corner. “C” is at the lower left corner. The distance between “A” and “B” equals that between “B” and “C”. Subfigure (b) figure has 6 rows of equations. Equation 1 is “A.x = 10;”. Equation 2 is “A.y = 10;”. Equation 3 is “B.x = A.x - 5;”. Equation 4 is “B.y = A.y;”. Equation 5 is “A.x - C.x = C.y - A.y;”. Equation 6 is “C.x = B.x;”. Subfigure (c) figure is a matrix times a column vector equals 0. The matrix has 6 rows and 8 lines. Row 1 is 1 0 0 0 0 0 -1 0. Row 2 is 0 1 0 0 0 0 -1 0. Row 3 is 1 0 -1 0 0 0 0 -1. Row 4 is 0 1 0 -1 0 0 0 0. Row 5 is 1 1 0 0 -1 -1 0 0. Row 6 is 0 0 1 0 -1 0 0 0. The column vector is A.x A.y B.x B.y C.x C.y c1 c2. 
+
+Fig 10. This figure has 3 subfigures. Subfigure (a) figure has four squares arranged horizontally with text “A”, “B”, “C”, and “D”. Subfigure (b) figure is a matrix with 4 rows and 6 columns. Above it are six expressions represent for the columns. They are “A.x”, “B.x”, “C.x”, “D.x”, “c1” and “c2”. Row 1 is 1 0 0 0 -1 0. Row 2 is 1 -2 1 0 0 0. Row 3 is 0 1 -2 1 0 0. Row 4 is 0 0 0 1 0 -1. Subfigure (b) figure is a row vector equals 2 times of row 2 of the matrix plus row 3 of the matrix. That is 2 -3 0 1 0 0.
+
+Table 4. All cells are texts.
+
+Fig 11. This figure has two parts. The left part has a square on the left with text “A”, a circle on the right with text “B” and two hand drawn trails above and below. The right part has the same “A” and “B” as the left part. But the upper trail is replaced with a circle with text “B”. The lower trail is replaced with a square with text “A”. Between the two parts is an arrow from the left to the right.
+
+Fig 12 (a). There are three squares named A, B and C. There is an equation: 1 * A.x – 3 * B.x + 2 * C.x = 0;
+
+Fig 12 (b)-1. There are three squares named A, B and C. There is an equation: 1 * A.x + 2 * B.x - 3 * D.x = 0;
+
+Fig 12 (b)-2. There are three squares named A, B and C. There is an equation: -3 * A.x + 2 * B.x + 1 * D.x = 0;
+
+Fig 12 (b)-3. There are three squares named A, B and C. There is an equation: 1 * B.x – 3 * C.x + 2 * D.x = 0;
+
+Fig 13 (a). There are three squares named A, B and C. There is a red dot labeled Move B here. The equations are: A.x = c1, B.x – A.x = c2, B.x = (A.x + C.x) / 2, A.x = 20, B.x = 30 => B.x = 35, C.x = 40, c1 = 20, c2 = 10.
+
+Fig 13 (b). There are three squares named A, B and C. The equations are: A.x = c1, B.x – A.x = c2, B.x = (A.x + C.x) / 2, A.x = 20, B.x = 35, c1 = 20.
+
+Fig 13 (c). There are three squares named A, B and C. The equations are: A.x = c1, B.x – A.x = c2, B.x = (A.x + C.x) / 2 , B.x = 35, c1 = 10.
+
+Fig 13 (d). There are three squares named A, B and C. The equations are: A.x = c1, A.x = 20, B.x = 35, C.x = 40, c1 = 20, c2 = 10.
+
+Fig 14. There are three squares. There are three yellow dashed lines, one connecting the top of the squares, one connecting the center of the squares, and one connecting the bottom of the squares. There are two arrows between the left-most and the center squares. There is one arrow between the center and the right-most squares. The lengths of the arrows are the same.
+
+Fig 15. This figure has been explained in writing.
+
+Fig 16. This is a pie figure, including Both speech and gesture (68.42%), Only speech (28.48%), Only gesture (2.80%) and Neither speech nor gesture (0.30%).
+
+Fig 17. This is a hist figure. There are four bins, each containing two bars. The task ID of the first bin is 1, where the bar for CNET is 316.19 and the one for PPT is 530.42. The task ID of the second bin is 2, where the bar for CNET is 357.51 and the one for PPT is 549.92. The task ID of the third bin is 3, where the bar for CNET is 280.22 and the one for PPT is 506.00. The task ID of the fourth bin is 4, where the bar for CNET is 380.52 and the one for PPT is 507.17.
+
+Fig 18(a). This is a pie figure, including Interval between two commands (45.44%), Speech input (28.31%), Gesture input (11.95%), System execution (5.76%), Selecting candidates (1.68%) and GUI operations (7.75%).
+
+Fig 18(b). This is a line chart. The x-axis is Task Index. The y-axis is Interval Time between Two Commands (s). Four points in the chart, including (1, 3.704), (2, 3.312), (3, 3.212), and (4, 3.125).
+
+Fig 19. This is a hist figure. There are four bins, each containing two bars. The task ID of the first bin is 1, where the bar for CNET is 74.73 and the one for PPT is 57.04. The task ID of the second bin is 2, where the bar for CNET is 79.02 and the one for PPT is 60.86. The task ID of the third bin is 3, where the bar for CNET is 84.36 and the one for PPT is 58.57. The task ID of the fourth bin is 4, where the bar for CNET is 79.13 and the one for PPT is 61.08.
+
+Fig 20. This is a scatter figure. The x-axis is Time (min). The y-axis is Score. The dots for CNET gather in the left top corner, indicating that the time is short and the scores are high. The dots for ppt gather in the lower half. There are four lines, indicating the upper bound of CNET, the lower bound of CNET, the upper bound of PPT and the low bound of PPT.
+
+Table 6. All cells in the table are texts.

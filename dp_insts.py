@@ -9,21 +9,47 @@ from utils import find_indices, remove_all
 plt.rcParams['font.sans-serif'] = 'simhei'
 
 # PEOPLE = "azd crj cyy djy frw lly lzj stp tty xq ylc ytj zyx".split(" ")
-PEOPLE = "azd crj cyy djy frw lly lzj tty xq ylc ytj zyx".split(" ")
+PEOPLE = "azd crj cyy djy frw lly lzj tty xq ylc ytj zyx lyf zyw zxy lgz lbc hmf zhp ywt dyc jjx xtx wzz".split(" ")
 PEOPLE_NAIVE = "cyx dhc fsy pyk sms tyq yxy znn".split(" ")
-SEQUENCE = [[3, 1, 4, 2],
+# SEQUENCE = [[3, 1, 4, 2], # 4312
+#             [3, 4, 2, 1], # 3142
+#             [1, 2, 4, 3], # 3421
+#             [4, 2, 3, 1], # 1243
+#             [1, 4, 2, 3], # 4231
+#             # [3, 1, 2, 4],
+#             [2, 3, 4, 1], # 1423
+#             [1, 3, 4, 2], # 1234
+#             [1, 2, 3, 4], # 4213
+#             [1, 2, 3, 4], # 1234
+#             [4, 2, 1, 3], # 4123
+#             [4, 3, 1, 2], # 2341
+#             [4, 1, 2, 3]  # 1342
+#             ]
+SEQUENCE = [[4, 3, 1, 2],
+            [3, 1, 4, 2],
             [3, 4, 2, 1],
             [1, 2, 4, 3],
             [4, 2, 3, 1],
             [1, 4, 2, 3],
-            # [3, 1, 2, 4],
-            [2, 3, 4, 1],
-            [1, 3, 4, 2],
-            [1, 2, 3, 4],
             [1, 2, 3, 4],
             [4, 2, 1, 3],
-            [4, 3, 1, 2],
-            [4, 1, 2, 3]
+            [1, 2, 3, 4],
+            [4, 1, 2, 3],
+            [2, 3, 4, 1],
+            [1, 3, 4, 2],
+
+            [1, 4, 3, 2],
+            [3, 4, 2, 1],
+            [2, 4, 1, 3],
+            [2, 1, 3, 4],
+            [2, 1, 4, 3],
+            [1, 4, 3, 2],
+            [4, 2, 1, 3],
+            [1, 3, 4, 2],
+            [3, 1, 2, 4],
+            [1, 2, 4, 3],
+            [4, 2, 1, 3],
+            [1, 4, 3, 2],
             ]
 instructions = "开始语音输入 \
                 结束语音输入 \
@@ -125,6 +151,7 @@ def inst_num_ave():
     round_type_num = [0, 0, 0, 0]
     round_num = 0
     total_time = 0
+    reuse_num = 0
     for people in PEOPLE:
         for dir in listdir(people):
             pathname = os.path.join(people, dir, "log.json")
@@ -174,8 +201,13 @@ def inst_num_ave():
                 all_gui_pos_1 = find_indices(log_texts, instructions[-2])
                 round_type_num[3] += len(all_gui_pos_0)
                 round_type_num[3] += len(all_gui_pos_1)
-    
+
+                all_input_0 = find_indices(log_texts, "开始语音输入")
+                all_input_1 = find_indices(log_texts, "输入框文本变化") 
+                if not(len(all_input_0) > 0 or len(all_input_1) > 0):
+                    reuse_num += 1
     print(round_type_num, "sum: ", np.sum(round_type_num))
+    print(f"reuse num: {reuse_num}")
     return round_type_num
 
 def pos_related_num():
@@ -234,7 +266,7 @@ def candidate_ave_index():
                     print(pathname)
     print(remove_all(candidates, 0))
     candidates = np.array(candidates) + 1
-    print(len(candidates))
+    print(len(remove_all(candidates, 0)))
     # print(list(candidates).count(2))
     # print(list(candidates).count(3))
     # print(list(candidates).count(4))

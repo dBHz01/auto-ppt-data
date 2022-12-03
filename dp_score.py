@@ -24,8 +24,10 @@ def do_wilcoxon():
                 single_score.append(int(i.replace(" ", "")))
             score_office.append(single_score)
     score_cnet = np.array(score_cnet).T
+    print(f"raw score-cnet {[np.mean(score_cnet[i]) for i in range(6)]}")
     score_cnet = np.delete(score_cnet, [1,2], axis=0)
     score_office = np.array(score_office).T
+    print(f"score-cnet: {[np.mean(score_cnet[i]) for i in range(4)]}\nscore-office: {[np.mean(score_office[i]) for i in range(4)]}")
     print(scipy.stats.wilcoxon(score_cnet[0], score_office[0]))
     print(scipy.stats.wilcoxon(score_cnet[1], score_office[1]))
     print(scipy.stats.wilcoxon(score_cnet[2], score_office[2]))

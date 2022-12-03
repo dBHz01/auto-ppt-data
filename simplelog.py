@@ -569,7 +569,7 @@ def cal_time_separately():
         t[4] = 0
     return [np.sum(i) / 1000 / len(PEOPLE) for i in separate_time]
 
-def cal_time_separately_single():
+def cal_time_separately_single(all_people=PEOPLE):
     '''
     按照不同任务来计算时间, 但不分段, 除去该删除的时间不算
     0. 开始输入之前的时间（包括切换功能栏、撤销等）
@@ -586,7 +586,7 @@ def cal_time_separately_single():
     round_type_num = [0, 0, 0]
     round_num = 0
     total_time = 0
-    for people in PEOPLE:
+    for people in all_people:
         for dir in listdir(people):
             pathname = os.path.join(people, dir, "log.json")
             label = int(dir.split("-")[1]) - 1
@@ -933,7 +933,7 @@ def cal_naive_whole_time():
     print(np.array(all_time_0) / 1000)
     return np.array(all_time_0) / 1000
 
-def cal_think_time():
+def cal_think_time(all_people=PEOPLE):
     '''
     按照不同任务来计算时间, 但不分段, 除去该删除的时间不算
     0. 开始输入之前的时间（包括切换功能栏、撤销等）
@@ -948,7 +948,7 @@ def cal_think_time():
     think_time_with_people = []
     for i in range(4):
         all_think_time.append([[], [], [], []]) # last is gap time
-    for people in PEOPLE:
+    for people in all_people:
         for dir in listdir(people):
             pathname = os.path.join(people, dir, "log.json")
             label = int(dir.split("-")[1]) - 1

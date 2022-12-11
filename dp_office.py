@@ -2,7 +2,7 @@ import numpy as np
 
 OFFICE_FILENAME = "office-time.txt"
 # PEOPLE = "jjx lbc lgz xtx ywt zhp zxy zyw lyf dyc wzz hmf"
-PEOPLE = "dyc hmf jjx lbc lgz lyf wzz xtx ywt zhp zxy zyw djy azd crj zyx frw ytj cyy stp tty lly lzj xq"
+PEOPLE = "dyc hmf jjx lbc lgz lyf wzz xtx ywt zhp zxy zyw djy azd crj zyx frw ytj cyy ylc tty lly lzj xq".split(" ")
 
 SEQUENCE = [
     [4, 3, 1, 2],

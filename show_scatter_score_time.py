@@ -25,6 +25,7 @@ def plotLine(x, y, x_scale=[], color='red'):
     return xx, yy
 
 def plot():
+    people_num = 24
     ave_score = getAveScore()
     cnet_time = cal_time_separately_single()
     office_time = cal_all_time()
@@ -43,20 +44,20 @@ def plot():
     c_score = [[], [], [], []]
     o_score = [[], [], [], []]
     for i in range(4):
-        for j in range(24):
+        for j in range(people_num):
             all_time[i].append(cnet_time[i][j])
             c_time[i].append(cnet_time[i][j])
             all_label[i].append('CNET')
-        for j in range(24):
+        for j in range(people_num):
             all_time[i].append(office_time[i][j])
             o_time[i].append(office_time[i][j])
             all_label[i].append('PPT')
     for i in range(4):
-        for j in range(24):
+        for j in range(people_num):
             c_score[i].append(ave_score[i][j][0])
-        for j in range(24, 48):
+        for j in range(people_num, people_num * 2):
             o_score[i].append(ave_score[i][j][0])
-        for j in range(48):
+        for j in range(people_num * 2):
             all_score[i].append(ave_score[i][j][0])
 
     # for i in range(3, 4):
@@ -121,6 +122,7 @@ def plot():
     all_time = np.array(all_time).flatten() / 60
     all_score = np.array(all_score).flatten()
     all_label = np.array(all_label).flatten()
+    print(all_label)
 
     # for i in range(len(all_label)):
     #     print("cur: ", i)
@@ -156,8 +158,8 @@ def plot():
     # plt.text(7.9, 78, "cnet lower bound")
     # plt.text(11.5, 72, "ppt upper bound")
     # plt.text(10, 42, "cnet lower bound")
-    plt.xlim(40 / 60, 1000 / 60)
-    plt.ylim(30, 100)
+    # plt.xlim(40 / 60, 1000 / 60)
+    # plt.ylim(30, 100)
     plt.show()
 
 if __name__ == "__main__":

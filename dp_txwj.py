@@ -4,6 +4,7 @@ import scipy.stats
 import json
 import os
 from dp_insts import PEOPLE
+from dp_office import PEOPLE as OFFICE_PEOPLE
 # from statsmodels.formula.api import ols
 # from statsmodels.stats.anova import anova_lm
 
@@ -91,11 +92,14 @@ def getAveScore():
     for i in img_score:
         for j in range(len(i)):
             i[j] = (np.mean(i[j]), j + 1)
+    print(img_score)
     return img_score
 
 
 def getScoreFromDebugout():
     stu_ids = os.listdir("debugout/data")
+    if ".DS_Store" in stu_ids:
+        stu_ids.remove(".DS_Store")
     for d in stu_ids:
         with open(f"debugout/data/{d}/{d}.txt", "r") as f:
             data = json.loads(f.read())
@@ -108,10 +112,10 @@ def getScoreFromDebugout():
                 else:
                     print(k)
                 drawer_name = k[0]
-                drawer_id = PEOPLE.index(drawer_name)
                 sys_type = 0 if k[1] == "cnet" else 1
+                drawer_id = PEOPLE.index(drawer_name) if sys_type == 0 else OFFICE_PEOPLE.index(drawer_name)
                 img_type = int(k[2][0])
-                img_score[img_type - 1][drawer_id * 2 + sys_type - 1].append(v)
+                img_score[img_type - 1][drawer_id + sys_type * len(PEOPLE) - 1].append(v)
 
 
 if __name__ == "__main__":
@@ -126,3 +130,4 @@ if __name__ == "__main__":
         print("anova: {}".format(scipy.stats.f_oneway(
             cnet_score[i], office_score[i])))
     calSortedAveScore()
+    

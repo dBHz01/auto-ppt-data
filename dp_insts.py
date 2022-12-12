@@ -276,7 +276,59 @@ def candidate_ave_index():
     print("std: ", np.std(remove_all(candidates, 0)))
     return np.mean(remove_all(candidates, 0)), [list(candidates).count(i) for i in range(2, 6)]
 
+def inst_classify():
+    all_labels = [0, 0, 0, 0] # 执行当前指令 需要补充后执行 需要补充后执行 需要补充后联动调整
+    for people in PEOPLE:
+        for dir in listdir(people):
+            pathname = os.path.join(people, dir, "log.json")
+            with open(pathname, "r", encoding="utf-8") as f:
+                try:
+                    last_instruction = ""
+                    data = json.loads(f.read())
+                    for i, single_log in enumerate(data):
+                        if (instructions.index(single_log["msg"]) == instructions.index("系统接收指令输入")):
+                            last_instruction = single_log["uttr"]
+                        elif (instructions.index(single_log["msg"]) == instructions.index("指令执行结束")):
+                            if "建" in last_instruction:
+                                all_labels[1] += 1
+                            elif "改" in last_instruction:
+                                if "文字" in last_instruction or "文本" in last_instruction:
+                                    all_labels[0] += 1
+                                elif "色" in last_instruction or "大小" in last_instruction or "宽度" in last_instruction or "高度" in last_instruction:
+                                    all_labels[1] += 1
+                                elif "箭头" in last_instruction or "直线" in last_instruction:
+                                    all_labels[0] += 1
+                                elif "距离" in last_instruction or "横坐标" in last_instruction or "纵坐标" in last_instruction:
+                                    all_labels[2] += 1
+                                else:
+                                    print(last_instruction)
+                            elif "删" in last_instruction:
+                                all_labels[0] += 1
+                            elif "复制" in last_instruction:
+                                all_labels[2] += 1
+                            elif "移动" in last_instruction:
+                                if "保持" in last_instruction:
+                                    all_labels[1] += 1
+                                elif "中点" in last_instruction:
+                                    all_labels[2] += 1
+                                elif "这里" in last_instruction:
+                                    all_labels[3] += 1
+                                elif "横坐标" in last_instruction or "纵坐标" in last_instruction:
+                                    all_labels[2] += 1
+                                elif "右" in last_instruction:
+                                    all_labels[3] += 1
+                                else:
+                                    print(last_instruction)
+                            else:
+                                print(last_instruction)
+
+                except Exception:
+                    print(pathname)
+    all_labels[2] += 258
+    print(all_labels, f"sum: {np.sum(all_labels)}")
+
 if __name__ == "__main__":
     inst_num_ave()
-    pos_related_num()
-    candidate_ave_index()
+    # pos_related_num()
+    # candidate_ave_index()
+    inst_classify()

@@ -80,18 +80,16 @@ def calSortedAveScore():
     def compFirst(a):
         return a[0]
     for i in img_score:
-        for j in range(len(i)):
-            i[j] = (np.mean(i[j]), j + 1)
         i.sort(key=compFirst)
-    for i in img_score:
-        print(i)
+    # for i in img_score:
+    #     print(i, len(i))
 
 
 def getAveScore():
     getScoreFromDebugout()
     for i in img_score:
         for j in range(len(i)):
-            i[j] = (np.mean(i[j]), j + 1)
+            i[j] = (np.mean(i[j]), j)
     print(img_score)
     return img_score
 
@@ -100,6 +98,7 @@ def getScoreFromDebugout():
     stu_ids = os.listdir("debugout/data")
     if ".DS_Store" in stu_ids:
         stu_ids.remove(".DS_Store")
+    # sum_v = 0
     for d in stu_ids:
         with open(f"debugout/data/{d}/{d}.txt", "r") as f:
             data = json.loads(f.read())
@@ -115,7 +114,10 @@ def getScoreFromDebugout():
                 sys_type = 0 if k[1] == "cnet" else 1
                 drawer_id = PEOPLE.index(drawer_name) if sys_type == 0 else OFFICE_PEOPLE.index(drawer_name)
                 img_type = int(k[2][0])
-                img_score[img_type - 1][drawer_id + sys_type * len(PEOPLE) - 1].append(v)
+                # if drawer_name == "wzz" and sys_type == 1:
+                #     sum_v += v
+                img_score[img_type - 1][drawer_id + sys_type * len(PEOPLE)].append(v)
+    # print(sum_v)
 
 
 if __name__ == "__main__":
@@ -129,5 +131,21 @@ if __name__ == "__main__":
         # print("wilcoxon: {}".format(scipy.stats.wilcoxon(cnet_seq[i], office_seq[i])))
         print("anova: {}".format(scipy.stats.f_oneway(
             cnet_score[i], office_score[i])))
-    calSortedAveScore()
-    
+    print(f"sgdiag mean: {np.mean(np.array(cnet_score).reshape(-1))} std: {np.std(np.array(cnet_score).reshape(-1))}")
+    print(f"office mean: {np.mean(np.array(office_score).reshape(-1))} std: {np.std(np.array(office_score).reshape(-1))}")
+    for i in img_score:
+        for j in range(len(i)):
+            i[j] = (np.mean(i[j]), j)
+    # calSortedAveScore()
+    cnet_score_0 = [np.mean([img_score[j][i][0] for j in range(4)]) for i in range(12)]
+    cnet_score_1 = [np.mean([img_score[j][i][0] for j in range(4)]) for i in range(12, 24)]
+    office_score_0 = [np.mean([img_score[j][i][0] for j in range(4)]) for i in range(24, 36)]
+    office_score_1 = [np.mean([img_score[j][i][0] for j in range(4)]) for i in range(36, 48)]
+    print(f"mean: {np.mean(cnet_score_0)} {np.mean(cnet_score_1)} {np.mean(office_score_0)} {np.mean(office_score_1)}")
+    print(f"std: {np.std(cnet_score_0)} {np.std(cnet_score_1)} {np.std(office_score_0)} {np.std(office_score_1)}")
+    print(f"anova-0-1 {scipy.stats.f_oneway(cnet_score_0, cnet_score_1)}")
+    print(f"anova-0-2 {scipy.stats.f_oneway(cnet_score_0, office_score_0)}")
+    print(f"anova-0-3 {scipy.stats.f_oneway(cnet_score_0, office_score_1)}")
+    print(f"anova-1-2 {scipy.stats.f_oneway(cnet_score_1, office_score_0)}")
+    print(f"anova-1-3 {scipy.stats.f_oneway(cnet_score_1, office_score_1)}")
+    print(f"anova-2-3 {scipy.stats.f_oneway(office_score_0, office_score_1)}")

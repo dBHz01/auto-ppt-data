@@ -4,5 +4,6 @@
 *.zip
 tmp
 debugout
+pictures
 __pycache__
 .DS_Store

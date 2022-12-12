@@ -122,7 +122,6 @@ def plot():
     all_time = np.array(all_time).flatten() / 60
     all_score = np.array(all_score).flatten()
     all_label = np.array(all_label).flatten()
-    print(all_label)
 
     # for i in range(len(all_label)):
     #     print("cur: ", i)

@@ -140,25 +140,27 @@ def plot():
     # })
     # sns.scatterplot(x='time', y='score', hue='label', data=df, palette=['blue', 'yellow', 'red', 'black'])
     sns.scatterplot(x='time', y='score', hue='label', data=df)
+    # for i, t in enumerate(all_time):
+    #     plt.text(t, all_score[i], i)
     
-    cnet_upper = [29, 32, 33, 48, 49, 59, 78, 79, 83]
-    cnet_lower = [5, 9, 26, 28, 30, 35, 77]
-    office_upper = [36, 37, 38, 40, 45, 60, 62, 84, 88, 92, 93]
-    office_lower = [39, 47, 68, 87, 89]
-    # x0, y0 = plotLine(np.array([all_time[i] for i in cnet_upper]), np.array([all_score[i] for i in cnet_upper]), np.arange(3, 8.8, 1/60), 'b')
-    # x1, y1 = plotLine(np.array([all_time[i] for i in cnet_lower]), np.array([all_score[i] for i in cnet_lower]), np.arange(3, 8.8, 1/60), 'b')
-    # x2, y2 = plotLine(np.array([all_time[i] for i in office_upper]), np.array([all_score[i] for i in office_upper]), np.arange(4, 14, 1/60), 'orange')
-    # x3, y3 = plotLine(np.array([all_time[i] for i in office_lower]), np.array([all_score[i] for i in office_lower]), np.arange(4, 14, 1/60), 'orange')
+    cnet_upper = [114, 111, 117, 101, 107, 51, 109, 113, 96, 97]
+    cnet_lower = [0, 8, 9, 10, 11, 59, 19, 161]
+    office_upper = [142, 84, 74, 129, 30, 189]
+    office_lower = [45, 128, 75, 25, 137, 27, 89, 188]
+    x0, y0 = plotLine(np.array([all_time[i] for i in cnet_upper]), np.array([all_score[i] for i in cnet_upper]), np.arange(2, 11, 1/60), 'b')
+    x1, y1 = plotLine(np.array([all_time[i] for i in cnet_lower]), np.array([all_score[i] for i in cnet_lower]), np.arange(2, 11, 1/60), 'b')
+    x2, y2 = plotLine(np.array([all_time[i] for i in office_upper]), np.array([all_score[i] for i in office_upper]), np.arange(4, 14, 1/60), 'orange')
+    x3, y3 = plotLine(np.array([all_time[i] for i in office_lower]), np.array([all_score[i] for i in office_lower]), np.arange(4, 14, 1/60), 'orange')
 
-    # plt.fill_between(x0, y1, y0, color='blue', alpha=0.2)
-    # plt.fill_between(x2, y3, y2, color='orange', alpha=0.2)
+    plt.fill_between(x0, y1, y0, color='blue', alpha=0.2)
+    plt.fill_between(x2, y3, y2, color='orange', alpha=0.2)
 
-    # plt.text(6, 92, "cnet upper bound")
-    # plt.text(7.9, 78, "cnet lower bound")
-    # plt.text(11.5, 72, "ppt upper bound")
-    # plt.text(10, 42, "cnet lower bound")
-    # plt.xlim(40 / 60, 1000 / 60)
-    # plt.ylim(30, 100)
+    plt.text(6, 96, "cnet upper bound")
+    plt.text(7.9, 85, "cnet lower bound")
+    plt.text(11.5, 82, "ppt upper bound")
+    plt.text(10, 61, "cnet lower bound")
+    plt.xlim(40 / 60, 1000 / 60)
+    plt.ylim(55, 100)
     plt.show()
 
 if __name__ == "__main__":

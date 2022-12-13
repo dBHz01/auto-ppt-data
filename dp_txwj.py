@@ -117,6 +117,7 @@ def getScoreFromDebugout():
                 # if drawer_name == "wzz" and sys_type == 1:
                 #     sum_v += v
                 img_score[img_type - 1][drawer_id + sys_type * len(PEOPLE)].append(v)
+    return cnet_score, office_score, img_score
     # print(sum_v)
 
 

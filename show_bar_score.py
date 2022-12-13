@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
-from dp_txwj import getScore
+from dp_txwj import getScoreFromDebugout
 from simplelog import cal_naive_time_separately_single, cal_naive_whole_time, cal_time_separately, cal_time_separately_single 
 from dp_office import cal_all_time, cal_ave_time
 import seaborn as sns
@@ -33,8 +33,8 @@ def plot_with_matplotlib():
     plt.show()
 
 def plot_with_sns():
-    people_num = 20 * 12
-    cnet_score, office_score, img_score = getScore()
+    people_num = 43 * 24
+    cnet_score, office_score, img_score = getScoreFromDebugout()
     cnet_score = np.array(cnet_score)
     office_score = np.array(office_score)
     cnet_score_flattern = cnet_score.flatten()

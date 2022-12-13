@@ -92,4 +92,5 @@ def plot_separately():
     plt.show()
 
 if __name__ == "__main__":
+    plot_with_sns()
     plot_separately()
